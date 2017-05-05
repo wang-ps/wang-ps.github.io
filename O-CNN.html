@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" slick-uniqueid="3">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- <meta name="keywords" content="Pengshuai Wang, Peng-Shuai Wang, Tsinghua University, 王鹏帅, 清华大学, Mesh Denoising"> 
-<meta name="description" content="Mesh Denoising via Cascaded Normal Regression"> -->
+<meta name="keywords" content="Pengshuai Wang, Peng-Shuai Wang, Tsinghua University, 王鹏帅, 清华大学, O-CNN, octree, CNN"> 
+<meta name="description" content="O-CNN: Octree-based Convolutional Neural Networks for 3D Shape Analysis">
 <link rel="stylesheet" href="./Pengshuai Wang - Homepage_files/style/jemdoc.css" type="text/css">
 <style type="text/css">
 </style>
@@ -20,21 +20,36 @@
 <table>
 <tbody>
   <tr>    
-    <td valign="top" align="center" >      
-      <b><font face="Times New Roman"  size="6">O-CNN</font></b>
-      <br><br>      
-      <p>
-        <!--  <font size="4"> <a href="http://wang-ps.github.io/"  target="_blank">Peng-Shuai Wang</a> </font> <font size="2"><sup>12</sup></font> &emsp;&emsp;
-         <font size="4"> <a href="http://research.microsoft.com/en-us/UM/people/yangliu/"  target="_blank">Yang Liu</a> </font> <font size="2"><sup>2</sup></font> &emsp;&emsp;
-         <font size="4"> <a href="http://research.microsoft.com/en-us/um/people/xtong/xtong.html"  target="_blank">Xin Tong</a> </font> <font size="2"><sup>2</sup></font>
-         <br>
-         <font size="2"> <sup>1</sup></font> <font size="3"> <a href="http://www.tsinghua.edu.cn/" target="_blank">Tsinghua University</a></font> &emsp;&emsp;
-         <font size="2"> <sup>2</sup></font> <font size="3"><a href="http://research.microsoft.com/en-us/labs/asia/" target="_blank">Microsoft Research Asia</a> </font>
-         <br>
-         <br> -->
-      </p>
+    <td valign="top" align="center">     
+      <b><font size="5">O-CNN: Octree-based Convolutional Neural Networks for 3D Shape Analysis</font></b>
+      <br><br>
     </td>
   </tr>
+
+  <tr>
+    <td valign="top" align="center">
+         <font size="4" > <a href="http://wang-ps.github.io/"  target="_blank">Peng-Shuai Wang</a> </font> <font size="2"><sup>12</sup></font> &emsp;&emsp;
+         <font size="4" > <a href="https://xueyuhanlang.github.io/"  target="_blank">Yang Liu</a> </font> <font size="2"><sup>2</sup></font> &emsp;&emsp;
+         <font size="4" >Yu-Xiao Guo</a> </font> <font size="2"><sup>23</sup></font> &emsp;&emsp;
+         <font size="4" >Chun-Yu Sun</a> </font> <font size="2"><sup>12</sup></font> &emsp;&emsp;
+         <font size="4" > <a href="http://research.microsoft.com/en-us/um/people/xtong/xtong.html"  target="_blank">Xin Tong</a> </font> <font size="2"><sup>2</sup></font>
+         <br> 
+         <font size="2"> <sup>1</sup></font> <font size="3" > <a href="http://www.tsinghua.edu.cn/" target="_blank">Tsinghua University</a></font> &emsp;&emsp;
+         <font size="2"> <sup>2</sup></font> <font size="3" ><a href="http://research.microsoft.com/en-us/labs/asia/" target="_blank">Microsoft Research Asia</a> </font>
+         &emsp;&emsp;
+         <font size="2"> <sup>3</sup></font> <font size="3" ><a href="http://en.uestc.edu.cn/" target="_blank">University of Electronic Science and Technology of China</a> </font>
+         <br>
+         <font size="3" > ACM Transactions on Graphics (Proceedings of SIGGRAPH 2017) </font>
+         <br> <br>
+    </td>
+    </tr>
+
+    <tr>
+      <td valign="top" align="center">
+         <img width="95%" src="./O-CNN_files/teaser.png">
+      </td>
+    </tr>
+
 </tbody>
 </table>
 
@@ -42,22 +57,64 @@
 <h2>Abstract</h2>
 
 
-<!-- Key idea -->
-<h2>Key Idea</h2>
+<table>
+  <tbody>
+  <tr>
+    <p style="text-align:justify;">
+    <font face="Times New Roman" >
+      We present O-CNN, an Octree-based Convolutional Neural Network (CNN) 
+      for 3D shape analysis. Built upon the octree representation of 3D shapes,
+      our method takes the average normal vectors of a 3D model sampled in the
+      finest leaf octants as input and performs 3D CNN operations on the octants
+      occupied by the 3D shape surface. We design a novel octree data structure to
+      efficiently store the octant information and CNN features into the graphics
+      memory and execute the entire O-CNN training and evaluation on the
+      GPU. O-CNN supports various CNN structures and works for 3D shapes in
+      different representations. By restraining the computations on the octants
+      occupied by 3D surfaces, the memory and computational costs of the O-CNN
+      grow quadratically as the depth of the octree increases, which makes the 3D
+      CNN feasible for high-resolution 3D models. We compare the performance
+      of the O-CNN with other existing 3D CNN solutions and demonstrate the
+      efficiency and efficacy of O-CNN in three shape analysis tasks, including
+      object classification, shape retrieval, and shape segmentation.
+    </font>
+    </p>
+  </tr>
 
-
-<h2>Results</h2>
-
+  </tr>
+    <tr>
+      <td align="center" width="20%">
+        <img src="./O-CNN_files/thumbmail.png" width="160">
+      </td>
+      <td>
+          <strong>Paper</strong> [<a href="./O-CNN_files/CNN3D.pdf" target="_blank">PDF</a>] <br><br>
+          <strong>Code </strong> [coming soon] <br><br>
+          <strong>Citation</strong> [<a href="O-CNN_files/o-cnn.bib">BibTeX</a>]<br>
+          <p style="text-align:justify;">
+          <font face="Times New Roman" >
+          Peng-Shuai Wang, Yang Liu, Yu-Xiao Guo, Chun-Yu Sun, and Xin Tong.
+          2017. O-CNN: Octree-based Convolutional Neural Networks for 3D Shape
+          Analysis. ACM Trans. Graph. (SIGGRAPH) 36, 4, Article 72 (July 2017), 11 pages.
+          </font>
+          </p>
+          
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <!-- downloads -->
-<h2>Downloads</h2>
+<!-- <h2>Downloads</h2>
 <p> 
-[Paper] 
-[Code] 
-[Bibtex]
-</p>
+[<a href="./O-CNN_files/CNN3D.pdf" target="_blank">Paper</a>] 
+[Code(coming soon)] 
+[<a href="O-CNN_files/o-cnn.bib" target="_blank">BibTeX</a>]
+</p> -->
 
-
+<!-- <h2>Results</h2>
+<img width="100%" src="./O-CNN_files/classification.png">
+<img width="100%" src="./O-CNN_files/segmentation.png">
+<img width="100%" src="./O-CNN_files/retrieval.png"> -->
 
 </div>
 </body>
