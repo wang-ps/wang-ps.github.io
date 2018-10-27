@@ -17,80 +17,70 @@
 <div id="layout-content" style="margin-top:25px">
 
 <!-- teaser -->
-<table>
-<tbody>
-  <tr>    
-    <td valign="top" align="center">      
-      <b><font face="Times New Roman"  size="6">Mesh Denoising via Cascaded Normal Regression</font></b>
-      <br><br>      
-    </td>
-    </tr>
-  <tr>
-  <td valign="top" align="center">
-      <p>
-         <font size="4"> <a href="http://wang-ps.github.io/"  target="_blank">Peng-Shuai Wang</a> </font> <font size="2"><sup>12</sup></font> &emsp;&emsp;&emsp;
-         <font size="4"> <a href="https://xueyuhanlang.github.io/"  target="_blank">Yang Liu</a> </font> <font size="2"><sup>2</sup></font> &emsp;&emsp;&emsp;
-         <font size="4"> <a href="http://research.microsoft.com/en-us/um/people/xtong/xtong.html"  target="_blank">Xin Tong</a> </font> <font size="2"><sup>2</sup></font>
-         <br>
-         <font size="2"> <sup>1</sup></font> <font size="3"> <a href="http://www.tsinghua.edu.cn/" target="_blank">Tsinghua University</a></font> &emsp;&emsp;&emsp;
-         <font size="2"> <sup>2</sup></font> <font size="3"><a href="http://research.microsoft.com/en-us/labs/asia/" target="_blank">Microsoft Research Asia</a> </font>
-         <br>
-         <font size="3" face="Times New Roman" > ACM Transactions on Graphics (Proceedings of SIGGRAPH ASIA 2016) </font>
-         <br> <br><br>
-         <img width="100%" src="./Denoising_files/teaser.png">
-      </p>
-    </td>
-  </tr>
-</tbody>
-</table>
+<table border="0" width="100%"> <tbody>
+<tr>    
+  <td valign="top" align="center">      
+    <b><font face="Times New Roman"  size="6">Mesh Denoising via Cascaded Normal Regression</font></b>
+    <br><br>      
+  </td>
+</tr>
 
-<!-- Abstract -->
-<h2>Abstract</h2>
-<center> <img width="100%" src="./Denoising_files/abstract.png"> </center>
-<!-- <p style="text-align:justify;">
-  We present a data-driven approach for mesh denoising. Our key idea is to formulate the denoising process with cascaded non-linear regression functions and learn them from a set of noisy meshes and their ground-truth counterparts. Specifically, we develop a filtered facet normal descriptor (FND) for modeling the geometry features around each facet on the noisy mesh and model the regression function with neural networks. Our method makes no specific assumptions about the noise distribution and geometry features in the input. After training, the runtime denoising process is fully automatic. We evaluate our method on meshes with both synthetic and real scanned noise. Results demonstrate that our method outperforms the state-of-the-art mesh denoising methods and successfully removes different kinds of noise for meshes with various geometry features.
-</p>
- -->
+<tr>
+<td valign="top" align="center">
+  <p>
+    <font size="4"> <a href="http://wang-ps.github.io/"  target="_blank">Peng-Shuai Wang</a> </font> <font size="2"><sup>12</sup></font> &emsp;&emsp;&emsp;
+    <font size="4"> <a href="https://xueyuhanlang.github.io/"  target="_blank">Yang Liu</a> </font> <font size="2"><sup>2</sup></font> &emsp;&emsp;&emsp;
+    <font size="4"> <a href="http://research.microsoft.com/en-us/um/people/xtong/xtong.html"  target="_blank">Xin Tong</a> </font> <font size="2"><sup>2</sup></font>
+    <br>
+    <font size="2"> <sup>1</sup></font> <font size="3"> <a href="http://www.tsinghua.edu.cn/" target="_blank">Tsinghua University</a></font> &emsp;&emsp;&emsp;
+    <font size="2"> <sup>2</sup></font> <font size="3"><a href="http://research.microsoft.com/en-us/labs/asia/" target="_blank">Microsoft Research Asia</a> </font>
+    <br>
+    <font size="3" face="Times New Roman" > ACM Transactions on Graphics (Proceedings of SIGGRAPH ASIA 2016) </font>
+    <br> <br><br>
+    <img width="100%" src="./Denoising_files/teaser.png">
+  </p>
+</td>
+</tr>
+</tbody> </table>
+
 <!-- Key idea -->
+<table border="0" width="100%"> <tbody>
 <h2>Key Idea</h2>
-<table>
-<tbody>
-  <tr>    
-
-   <td width="70%" valign="middle" align="left">
-   <img width="85%" src="./Denoising_files/keyidea.png"> 
-  	<!-- 1. Recover the ground-truth normal from its local noisy region <img align="middle"  src="https://latex.codecogs.com/gif.latex?\mathbf{n}_f=\mathcal{F}(\Omega_f)"/> <br>
-  	2. Learn the function <img align="middle" src="https://latex.codecogs.com/gif.latex?\mathcal{F}(\Omega_f)"/> from data. <br>
+<tr>    
+  <td width="70%" valign="middle" align="left">
+    <img width="85%" src="./Denoising_files/keyidea.png"> 
+    <!-- 1. Recover the ground-truth normal from its local noisy region <img align="middle"  src="https://latex.codecogs.com/gif.latex?\mathbf{n}_f=\mathcal{F}(\Omega_f)"/> <br>
+    2. Learn the function <img align="middle" src="https://latex.codecogs.com/gif.latex?\mathcal{F}(\Omega_f)"/> from data. <br>
     3. Deform noisy mesh according to <img align="middle" src="https://latex.codecogs.com/gif.latex?\mathbf{n}_f"/>.-->
-    </td> 
-
-    <td width="30%" valign="middle" align="right">
+  </td> 
+  <td width="30%" valign="middle" align="right">
     <img width="90%" src="./Denoising_files/keyidea1.png">
-    </td> 
-
-  </tr>
-</tbody>
-</table>
+  </td> 
+</tr>
+</tbody> </table>
 
 <!-- pipeline -->
-<h2>Pipeline</h2>
-<br>
+<table border="0" width="100%"> <tbody>
+<h2>Pipeline</h2> <br>
 <center> <img width="100%" src="./Denoising_files/pipeline.png"> </center>
+</tbody> </table>
 
+<table border="0" width="100%"> <tbody>
 <h2>Results</h2>
 <!-- <center> <img width="90%" src="./Denoising_files/rst.png"></center> -->
 <center> <img width="100%" src="./Denoising_files/rst1.png"></center>
+</tbody> </table>
 
 <!-- downloads -->
+<table border="0" width="100%"> <tbody>
 <h2>Downloads</h2>
 <p> 
-[<a href="https://1drv.ms/b/s!Ar9egoTYLACXjynIgjTD8ydCjhvy" target="_blank">Paper</a>] 
-[<a href="https://1drv.ms/u/s!Ar9egoTYLACXjyhZMU6FppC1ZvFj" target="_blank">Code</a>] 
-[<a href="https://1drv.ms/u/s!Ar9egoTYLACXj1q6dYmF3z4pBQzw" target="_blank">Data</a>]  
-[<a href="Denoising_files/citation.bib" target="_blank">BibTeX</a>]
+  [<a href="https://1drv.ms/b/s!Ar9egoTYLACXjynIgjTD8ydCjhvy" target="_blank">Paper</a>] 
+  [<a href="https://1drv.ms/u/s!Ar9egoTYLACXjyhZMU6FppC1ZvFj" target="_blank">Code</a>] 
+  [<a href="https://1drv.ms/u/s!Ar9egoTYLACXj1q6dYmF3z4pBQzw" target="_blank">Data</a>]  
+  [<a href="Denoising_files/citation.bib" target="_blank">BibTeX</a>]
 </p>
-
-
+</tbody> </table>
 
 </div>
 </body>

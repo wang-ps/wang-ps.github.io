@@ -17,90 +17,68 @@
 <div id="layout-content" style="margin-top:25px">
 
 <!-- teaser -->
-<table>
-<tbody>
-  <tr>    
-    <td valign="top" align="center">     
-      <b><font size="5" face="Times New Roman" >Adaptive O-CNN: A Patch-based Deep Representation of 3D Shapes</font></b>
-      <br><br>
-    </td>
-  </tr>
+<table border="0" width="100%"> <tbody>
+<tr>    
+  <td valign="top" align="center">     
+    <b><font size="5" face="Times New Roman" >Adaptive O-CNN: A Patch-based Deep Representation of 3D Shapes</font></b>
+    <br><br>
+  </td>
+</tr>
 
-  <tr>
-    <td valign="top" align="center">
-         <font size="4" face="Times New Roman" > <a href="https://wang-ps.github.io/"  target="_blank">Peng-Shuai Wang</a> </font> <font size="2"><sup>12</sup></font> &emsp;&emsp;
-         <font size="4" face="Times New Roman" >Chun-Yu Sun</a> </font> <font size="2"><sup>12</sup></font> &emsp;&emsp;
-         <font size="4" face="Times New Roman" > <a href="https://xueyuhanlang.github.io/"  target="_blank">Yang Liu</a> </font> <font size="2"><sup>2</sup></font> &emsp;&emsp;
-         <font size="4" face="Times New Roman" > <a href="http://research.microsoft.com/en-us/um/people/xtong/xtong.html"  target="_blank">Xin Tong</a> </font> <font size="2"><sup>2</sup></font>
-         <br> 
-         <font size="2"> <sup>1</sup></font> <font size="3" face="Times New Roman" > <a href="http://www.tsinghua.edu.cn/" target="_blank">Tsinghua University</a></font> &emsp;&emsp;
-         <font size="2"> <sup>2</sup></font> <font size="3" face="Times New Roman" ><a href="http://research.microsoft.com/en-us/labs/asia/" target="_blank">Microsoft Research Asia</a> </font>
-         <br>
-         <font size="3" face="Times New Roman" > ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2018) </font>
-         <br> <br>
-    </td>
-    </tr>
+<tr>
+  <td valign="top" align="center">
+    <font size="4" face="Times New Roman" > <a href="https://wang-ps.github.io/"  target="_blank">Peng-Shuai Wang</a> </font> <font size="2"><sup>12</sup></font> &emsp;&emsp;
+    <font size="4" face="Times New Roman" >Chun-Yu Sun</a> </font> <font size="2"><sup>12</sup></font> &emsp;&emsp;
+    <font size="4" face="Times New Roman" > <a href="https://xueyuhanlang.github.io/"  target="_blank">Yang Liu</a> </font> <font size="2"><sup>2</sup></font> &emsp;&emsp;
+    <font size="4" face="Times New Roman" > <a href="http://research.microsoft.com/en-us/um/people/xtong/xtong.html"  target="_blank">Xin Tong</a> </font> <font size="2"><sup>2</sup></font>
+    <br> 
+    <font size="2"> <sup>1</sup></font> <font size="3" face="Times New Roman" > <a href="http://www.tsinghua.edu.cn/" target="_blank">Tsinghua University</a></font> &emsp;&emsp;
+    <font size="2"> <sup>2</sup></font> <font size="3" face="Times New Roman" ><a href="http://research.microsoft.com/en-us/labs/asia/" target="_blank">Microsoft Research Asia</a> </font>
+    <br>
+    <font size="3" face="Times New Roman" > ACM Transactions on Graphics (Proceedings of SIGGRAPH Asia 2018) </font>
+    <br> <br>
+  </td>
+</tr>
 
-    <tr>
-      <td valign="top" align="center">
-         <img width="100%" src="./AO-CNN_files/teaser.png">
-      </td>
-    </tr>
-
-</tbody>
-</table>
+<tr>
+  <td valign="top" align="center">
+      <img width="100%" src="./AO-CNN_files/teaser.png">
+  </td>
+</tr>
+</tbody> </table>
 
 <!-- Abstract -->
+<table border="0" width="100%"> <tbody>
 <h2>Abstract</h2>
 
+<tr>
+  <p style="text-align:justify;">
+  <font face="Times New Roman" >
+    We present an Adaptive Octree-based Convolutional Neural Network (Adaptive O-CNN) for efficient 3D shape encoding and decoding. Different from volumetric-based or octree-based CNN methods that represent a 3D shape with voxels in the same resolution, our method represents a 3D shape adaptively with octants at different levels and models the 3D shape within each octant with a planar patch. Based on this adaptive patch-based representation, we propose an Adaptive O-CNN encoder and decoder for encoding and decoding 3D shapes. The Adaptive O-CNN encoder takes the planar patch normal and displacement as input and performs 3D convolutions only at the octants at each level, while the Adaptive O-CNN decoder infers the shape occupancy and subdivision status of octants at each level and estimates the best plane normal and displacement for each leaf octant. As a general framework for 3D shape analysis and generation, the Adaptive O-CNN not only reduces the memory and computational cost, but also offers better shape generation capability than the existing 3D-CNN approaches. We validate Adaptive O-CNN in terms of efficiency and effectiveness on different shape analysis and generation tasks, including shape classification, 3D autoencoding, shape prediction from a single image, and shape completion for noisy and incomplete point clouds.
+  </font>
+  </p>
+</tr>
 
-<table>
-  <tbody>
-  <tr>
+<tr>
+  <td align="center" width="25%">
+    <img src="./AO-CNN_files/thumbmail.png" width="210">
+  </td>
+  <td>
+    <strong>Paper</strong> [<a href="https://wang-ps.github.io/AO-CNN_files/AOCNN.pdf" target="_blank">PDF</a>] <br><br>
+    <strong>Appendix</strong> [<a href="https://wang-ps.github.io/AO-CNN_files/appendix.pdf" target="_blank">PDF</a>] <br><br>
+    <strong>Slides</strong> [<a href="https://wang-ps.github.io/" target="_blank">PPTX</a>] <br><br>
+    <strong>Code&nbsp;&nbsp;</strong> [<a href="https://github.com/Microsoft/O-CNN" target="_blank">Github</a>] <br><br>
+    <strong>Citation</strong> [<a href="AO-CNN_files/ao-cnn.bib" target="_blank">BibTeX</a>]<br>
     <p style="text-align:justify;">
     <font face="Times New Roman" >
-      We present an Adaptive Octree-based Convolutional Neural Network (Adaptive O-CNN) for efficient 3D shape encoding and decoding. Different from volumetric-based or octree-based CNN methods that represent a 3D shape with voxels in the same resolution, our method represents a 3D shape adaptively with octants at different levels and models the 3D shape within each octant with a planar patch. Based on this adaptive patch-based representation, we propose an Adaptive O-CNN encoder and decoder for encoding and decoding 3D shapes. The Adaptive O-CNN encoder takes the planar patch normal and displacement as input and performs 3D convolutions only at the octants at each level, while the Adaptive O-CNN decoder infers the shape occupancy and subdivision status of octants at each level and estimates the best plane normal and displacement for each leaf octant. As a general framework for 3D shape analysis and generation, the Adaptive O-CNN not only reduces the memory and computational cost, but also offers better shape generation capability than the existing 3D-CNN approaches. We validate Adaptive O-CNN in terms of efficiency and effectiveness on different shape analysis and generation tasks, including shape classification, 3D autoencoding, shape prediction from a single image, and shape completion for noisy and incomplete point clouds.
-
+    Peng-Shuai Wang, Chun-Yu Sun, Yang Liu, and Xin Tong.
+    2018. Adaptive O-CNN: A Patch-based Deep Representation of 3D Shapes
+    Analysis. ACM Trans. Graph. (SIGGRAPH Asia) 37, 6, Article 217 (November 2018), 11 pages.
     </font>
-    </p>
-  </tr>
-
-  </tr>
-    <tr>
-      <td align="center" width="25%">
-        <img src="./AO-CNN_files/thumbmail.png" width="210">
-      </td>
-      <td>
-          <strong>Paper</strong> [<a href="https://wang-ps.github.io/AO-CNN_files/AOCNN.pdf" target="_blank">PDF</a>] <br><br>
-          <strong>Appendix</strong> [<a href="https://wang-ps.github.io/AO-CNN_files/appendix.pdf" target="_blank">PDF</a>] <br><br>
-          <strong>Slides</strong> [<a href="https://wang-ps.github.io/" target="_blank">PPTX</a>] <br><br>
-          <strong>Code&nbsp;&nbsp;</strong> [<a href="https://github.com/Microsoft/O-CNN" target="_blank">Github</a>] <br><br>
-          <strong>Citation</strong> [<a href="AO-CNN_files/ao-cnn.bib" target="_blank">BibTeX</a>]<br>
-          <p style="text-align:justify;">
-          <font face="Times New Roman" >
-          Peng-Shuai Wang, Chun-Yu Sun, Yang Liu, and Xin Tong.
-          2018. Adaptive O-CNN: A Patch-based Deep Representation of 3D Shapes
-          Analysis. ACM Trans. Graph. (SIGGRAPH Asia) 37, 6, Article 217 (November 2018), 11 pages.
-          </font>
-          </p>
-          
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- downloads -->
-<!-- <h2>Downloads</h2>
-<p> 
-[<a href="./O-CNN_files/CNN3D.pdf" target="_blank">Paper</a>] 
-[Code(coming soon)] 
-[<a href="O-CNN_files/o-cnn.bib" target="_blank">BibTeX</a>]
-</p> -->
-
-<!-- <h2>Results</h2>
-<img width="100%" src="./O-CNN_files/classification.png">
-<img width="100%" src="./O-CNN_files/segmentation.png">
-<img width="100%" src="./O-CNN_files/retrieval.png"> -->
+    </p>      
+  </td>
+</tr>
+</tbody> </table>
 
 </div>
 </body>
